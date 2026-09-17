@@ -1,0 +1,212 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Assistance My Location</title>
+<style>
+  :root{
+    --bg:#faf9f6;
+    --surface:#ffffff;
+    --text:#1c211f;
+    --muted:#5b655f;
+    --border:#e4e2da;
+    --accent:#2f6f5e;
+    --accent-ink:#eaf3f0;
+  }
+  @media (prefers-color-scheme: dark){
+    :root:not([data-theme="light"]){
+      --bg:#141715;
+      --surface:#1b1f1c;
+      --text:#eceeec;
+      --muted:#9aa39d;
+      --border:#2b302c;
+      --accent:#6fbfa8;
+      --accent-ink:#1e2b27;
+    }
+  }
+  *{box-sizing:border-box;}
+  body{
+    margin:0;
+    background:var(--bg);
+    color:var(--text);
+    font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Helvetica,Arial,sans-serif;
+    line-height:1.6;
+    padding-inline:20px;
+    padding-block:48px;
+  }
+  main{
+    max-width:640px;
+    margin-inline:auto;
+  }
+  .eyebrow{
+    display:inline-flex;
+    align-items:center;
+    gap:8px;
+    font-size:13px;
+    font-weight:600;
+    letter-spacing:.04em;
+    color:var(--accent);
+    text-transform:uppercase;
+    margin-bottom:10px;
+  }
+  .eyebrow::before{
+    content:"";
+    width:8px;height:8px;
+    border-radius:50%;
+    background:var(--accent);
+    flex:none;
+  }
+  h1{
+    font-size:clamp(28px,5vw,36px);
+    line-height:1.15;
+    margin:0 0 6px;
+    letter-spacing:-0.01em;
+  }
+  .sub{
+    color:var(--muted);
+    font-size:15px;
+    margin:0 0 36px;
+  }
+  .contact-card{
+    background:var(--surface);
+    border:1px solid var(--border);
+    border-radius:14px;
+    padding:22px 24px;
+    display:flex;
+    flex-wrap:wrap;
+    align-items:center;
+    justify-content:space-between;
+    gap:14px;
+    margin-bottom:40px;
+  }
+  .contact-card p{
+    margin:0;
+    font-size:14px;
+    color:var(--muted);
+  }
+  .contact-card a.button{
+    background:var(--accent);
+    color:var(--accent-ink);
+    text-decoration:none;
+    font-weight:600;
+    font-size:14px;
+    padding:10px 18px;
+    border-radius:999px;
+    white-space:nowrap;
+  }
+  .contact-card a.button:focus-visible{outline:2px solid var(--accent);outline-offset:2px;}
+  h2{
+    font-size:19px;
+    margin:40px 0 4px;
+    letter-spacing:-0.005em;
+  }
+  .lead{
+    color:var(--muted);
+    font-size:14px;
+    margin:0 0 18px;
+  }
+  .faq{
+    border-top:1px solid var(--border);
+  }
+  .faq details{
+    border-bottom:1px solid var(--border);
+    padding-block:14px;
+  }
+  .faq summary{
+    cursor:pointer;
+    font-weight:600;
+    font-size:15px;
+    list-style:none;
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    gap:12px;
+  }
+  .faq summary::-webkit-details-marker{display:none;}
+  .faq summary::after{
+    content:"+";
+    color:var(--accent);
+    font-size:18px;
+    flex:none;
+    transition:transform .15s ease;
+  }
+  .faq details[open] summary::after{
+    transform:rotate(45deg);
+  }
+  .faq summary:focus-visible{outline:2px solid var(--accent);outline-offset:3px;}
+  .faq p{
+    margin:10px 0 0;
+    color:var(--muted);
+    font-size:14px;
+  }
+  footer{
+    margin-top:48px;
+    padding-top:20px;
+    border-top:1px solid var(--border);
+    font-size:13px;
+    color:var(--muted);
+    display:flex;
+    flex-wrap:wrap;
+    gap:8px 16px;
+    justify-content:space-between;
+  }
+  footer a{color:var(--muted);}
+  footer a:hover{color:var(--accent);}
+  @media (prefers-reduced-motion: reduce){
+    .faq summary::after{transition:none;}
+  }
+</style>
+</head>
+<body>
+<main>
+  <span class="eyebrow">Assistance</span>
+  <h1>Assistance &mdash; My Location</h1>
+  <p class="sub">Application de gestion de location de v&eacute;hicules pour iPhone.</p>
+
+  <div class="contact-card">
+    <p>Une question, un bug, une suggestion&nbsp;? &Eacute;crivez-nous, nous r&eacute;pondons sous 48&nbsp;h.</p>
+    <a class="button" href="mailto:support@msbdcorporation.com">support@msbdcorporation.com</a>
+  </div>
+
+  <h2>Questions fr&eacute;quentes</h2>
+  <p class="lead">Les r&eacute;ponses les plus demand&eacute;es avant de nous &eacute;crire.</p>
+
+  <div class="faq">
+    <details open>
+      <summary>Comment fonctionne l'&eacute;tat des lieux intelligent&nbsp;?</summary>
+      <p>Photographiez le v&eacute;hicule sous tous les angles au d&eacute;part, puis au retour. L'intelligence artificielle compare automatiquement les deux s&eacute;ries de photos et signale les nouveaux dommages d&eacute;tect&eacute;s.</p>
+    </details>
+    <details>
+      <summary>Comment g&eacute;n&eacute;rer et faire signer un contrat&nbsp;?</summary>
+      <p>Depuis une location, ouvrez l'onglet Contrat pour g&eacute;n&eacute;rer un PDF professionnel. Le client peut signer directement sur l'&eacute;cran, et le document sign&eacute; se partage en un tap par WhatsApp, iMessage ou e-mail.</p>
+    </details>
+    <details>
+      <summary>&Agrave; quoi sert le mode Salari&eacute;&nbsp;?</summary>
+      <p>Il permet de confier l'iPhone &agrave; un employ&eacute; sans exposer les donn&eacute;es sensibles&nbsp;: prot&eacute;g&eacute; par code PIN, il autorise la cr&eacute;ation de locations et la consultation des fiches, mais emp&ecirc;che la modification des v&eacute;hicules ou la suppression de clients.</p>
+    </details>
+    <details>
+      <summary>Mes donn&eacute;es sont-elles sauvegard&eacute;es si je change d'appareil&nbsp;?</summary>
+      <p>Oui. Toutes vos donn&eacute;es (v&eacute;hicules, clients, locations) sont synchronis&eacute;es automatiquement via iCloud et disponibles sur tous vos appareils Apple connect&eacute;s au m&ecirc;me identifiant.</p>
+    </details>
+    <details>
+      <summary>Quelle est la diff&eacute;rence entre les formules Gratuit, Pro et Illimit&eacute;&nbsp;?</summary>
+      <p>Gratuit couvre 1 v&eacute;hicule, 5 clients et 3 locations simultan&eacute;es. Pro d&eacute;bloque jusqu'&agrave; 5 v&eacute;hicules, 50 clients, les locations illimit&eacute;es, les contrats PDF et l'analyse de dommages par IA. Illimit&eacute; retire toutes les limites de v&eacute;hicules et de clients, et ajoute votre logo sur les contrats.</p>
+    </details>
+    <details>
+      <summary>Comment annuler ou g&eacute;rer mon abonnement&nbsp;?</summary>
+      <p>Les abonnements sont g&eacute;r&eacute;s enti&egrave;rement par Apple. Rendez-vous dans R&eacute;glages iPhone &rarr; votre nom &rarr; Abonnements pour modifier ou r&eacute;silier &agrave; tout moment.</p>
+    </details>
+    <details>
+      <summary>L'application fonctionne-t-elle dans plusieurs langues&nbsp;?</summary>
+      <p>Oui, l'interface et les contrats PDF sont disponibles en fran&ccedil;ais, anglais, espagnol, italien et arabe, ind&eacute;pendamment l'un de l'autre.</p>
+    </details>
+  </div>
+
+  <footer>
+    <span>&copy; 2026 MSBD Corporation</span>
+    <a href="https://bdesigndigital.github.io/my-location-privacy-policy/">Politique de confidentialit&eacute;</a>
+  </footer>
+</main>
+</body>
+</html>
